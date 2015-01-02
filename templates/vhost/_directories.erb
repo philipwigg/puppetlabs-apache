@@ -68,6 +68,7 @@
         <%- if directory['allow'].kind_of?(Array) -%>
           <%- Array(directory['allow']).each do |access| -%>
     Allow <%=  access %>
+          <%- end -%>
         <%- end -%>
       <%- else -%>
     Allow <%= directory['allow'] %>
