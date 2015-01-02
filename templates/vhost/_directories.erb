@@ -59,6 +59,7 @@
         <%- if directory['deny'].kind_of?(Array) -%>
           <%- Array(directory['deny']).each do |access| -%>
     Deny <%=  access %>
+          <%- end -%>
         <%- end -%>
       <%- else -%>
     Deny <%= directory['deny'] %>
