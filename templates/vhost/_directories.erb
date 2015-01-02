@@ -60,9 +60,9 @@
           <%- Array(directory['deny']).each do |access| -%>
     Deny <%=  access %>
           <%- end -%>
-        <%- end -%>
-      <%- else -%>
+        <%- else -%>
     Deny <%= directory['deny'] %>
+        <%- end -%>
       <%- end -%>
       <%- if directory['allow'] and ! [ false, 'false', '' ].include?(directory['allow']) -%>
         <%- if directory['allow'].kind_of?(Array) -%>
